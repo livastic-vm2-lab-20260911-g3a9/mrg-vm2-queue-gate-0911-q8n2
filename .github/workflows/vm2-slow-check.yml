@@ -1,0 +1,9 @@
+name: VM2 Slow Check
+on:
+  pull_request:
+jobs:
+  vm2-slow-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hold queue window
+        run: sleep 90
