@@ -1,6 +1,5 @@
 queue_rules:
   - name: default
     queue_conditions: []
-    merge_conditions:
-      - label = vm2-release
+    merge_conditions: []
     merge_method: merge
