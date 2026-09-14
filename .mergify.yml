@@ -1,5 +1,19 @@
 queue_rules:
   - name: default
     queue_conditions: []
-    merge_conditions: []
+    merge_conditions:
+      - check-success = vm2-slow-check
+      - check-success = vm2-never-pass-0915
+    batch_size: 1
     merge_method: merge
+
+priority_rules:
+  - name: VM2 high interruption
+    conditions:
+      - title = VM2_INTERRUPT_HIGH_20260915
+    priority: high
+    allow_checks_interruption: true
+  - name: VM2 low baseline
+    conditions:
+      - title = VM2_INTERRUPT_LOW_20260915
+    priority: low
