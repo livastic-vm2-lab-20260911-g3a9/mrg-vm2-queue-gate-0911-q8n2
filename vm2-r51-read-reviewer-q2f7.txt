@@ -1,0 +1,1 @@
+Root47 Gate1 approved isolated reviewer-role test: one harmless text file, no code or CI or merge.
